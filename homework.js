@@ -1,251 +1,198 @@
 // No cambies los nombres de las funciones.
 
-function obtenerMayor(x, y) {
-  // "x" e "y" son números enteros (int).
-  // Devuelve el número más grande
-  // Si son iguales, devuelve cualquiera de los dos
+function crearGato(nombre, edad) {
+  // Crear un nuevo objeto con la propiedad "nombre" y el valor definido como el argumento "nombre".
+  // Agrega una propiedad al objeto con el nombre "edad" y usa el valor definido en el argumento "edad"
+  // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
+  // Devuelve el objeto
   // Tu código:
-  if(x > y) {
-    return x;
-  }
-  return y;
-}
-obtenerMayor(2,4) // 4
-
-function mayoriaDeEdad(edad) {
-  //Determinar si la persona según su edad puede ingresar a un evento.
-  //Si tiene 18 años ó más, devolver --> "Allowed"
-  //Si es menor, devolver --> "Not allowed"
-  if(edad >= 18) {
-    return "Allowed";
-  }
-   return "Not allowed";
-}
-mayoriaDeEdad(22) // "Allowed"
-  
-function conection(status) {
-  //Recibimos un estado de conexión de un usuario representado por un valor numérico. 
-  //Cuando el estado es igual a 1, el usuario está "Online"
-  //Cuando el estado es igual a 2, el usuario está "Away"
-  //De lo contrario, presumimos que el usuario está "Offline"
-  //Devolver el estado de conexión de usuario en cada uno de los casos.
-  if(status === 1) {
-    return "Online";
-  } else if( status === 2) {
-    return "Away";
-  }
-  return "Offline";
-}
-conection(1) // "Online"
-
-function saludo(idioma) {
-  // Devuelve un saludo en tres diferentes lenguajes:
-  // Si "idioma" es "aleman", devuelve "Guten Tag!"
-  // Si "idioma" es "mandarin", devuelve "Ni Hao!"
-  // Si "idioma" es "ingles", devuelve "Hello!"
-  // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
-  // Tu código:
-  if(idioma === "aleman") {
-    return "Guten Tag!";
-  } else if (idioma === "mandarin") {
-    return "Ni Hao!";
-  } else if(idioma === "ingles") {
-    return "Hello!";
-  }
-  return "Hola!"
-}
-saludo("aleman") // "Guten Tag!"
-
-function colors(color) {
-  //La función recibe un color. Devolver el string correspondiente:
-  //En caso que el color recibido sea "blue", devuleve --> "This is blue"
-  //En caso que el color recibido sea "red", devuleve --> "This is red"
-  //En caso que el color recibido sea "green", devuleve --> "This is green"
-  //En caso que el color recibido sea "orange", devuleve --> "This is orange"
-  //Caso default: devuelve --> "Color not found"
-  //Usar el statement Switch.
-   switch(color) {
-    case "blue":
-      return "This is blue";
-    case "red": 
-      return "This is red";
-    case "green":
-      return "This is green";
-    case "orange":
-      return "This is orange";
-    default: 
-    return "Color not found";
-  }
-     
-}
-colors("blue") // "This is blue"
-
-function esDiezOCinco(numero) {
-  // Devuelve "true" si "numero" es 10 o 5
-  // De lo contrario, devuelve "false"
-  // Tu código:
-  return numero ===10 || numero === 5
-  
-}
-esDiezOCinco(6) // false
-
-function estaEnRango(numero) {
-  // Devuelve "true" si "numero" es menor que 50 y mayor que 20
-  // De lo contrario, devuelve "false"
-  // Tu código:
-  if(numero < 50 && numero >20) {
-    return true;
-  }
-   return false;
-}
-estaEnRango(43) // true
-
-function esEntero(numero) {
-  // Devuelve "true" si "numero" es un entero (int/integer)
-  // Ejemplo: 0.8 -> false
-  // Ejemplo: 1 -> true
-  // Ejemplo: -10 -> true
-  // De lo contrario, devuelve "false"
-  // Pista: Puedes resolver esto usando `Math.floor`
-  // Tu código:
-  if(numero % 1 === 0) {
-    return true;
-  } else if(numero % 1 !== 0);
-  return false;
-  return Math.floor;
-}
-esEntero(2) // true
-
-function fizzBuzz(numero) {
-  // Si "numero" es divisible entre 3, devuelve "fizz"
-  // Si "numero" es divisible entre 5, devuelve "buzz"
-  // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
-  // De lo contrario, devuelve el numero
-  if(numero % 15 === 0) {
-    return "fizzbuzz";
-  }
-  if(numero % 3 === 0) {
-    return "fizz";
-  } 
-  if(numero % 5 === 0) {
-    return "buzz";
-  }  
-  if(numero % 3 !== 0 && numero % 5 !== 0) {
-  return numero;
-  }
-}
-fizzBuzz(30) // "fizzbuzz"
-
-function operadoresLogicos(num1, num2, num3) {
-  //La función recibe tres números distintos. 
-  //Si num1 es mayor a num2 y a num3 y además es positivo, retornar ---> "Número 1 es mayor y positivo"
-  //Si alguno de los tres números es negativo, retornar ---> "Hay negativos"
-  //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
-  //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
-  //Si no se cumplen ninguna de las condiciones anteriores, retornar false.
-   if(num1 < 0 || num2 < 0 || num3 < 0) {
-    return "Hay negativos";
-  }
-  else if(num1 === 0 || num2 === 0 || num3 === 0) {
-    return "Error";
-  }
-  else if(num1 > 0 && num1 > num2 && num1 > num3) {
-    return "Número 1 es mayor y positivo";
-  }
-  else if(num3 > num1 && num3 > num2) {
-    return num3 + 1;
-  }
-  else {
-    return false;
-  }
-}
-operadoresLogicos(-2) // "Hay negativos"
-
-function esPrimo(numero) {
-  // Devuelve "true" si "numero" es primo
-  // De lo contrario devuelve "falso"
-  // Pista: un número primo solo es divisible por sí mismo y por 1
-  // Pista 2: Puedes resolverlo usando un bucle `for`
-  // Nota: Los números 0 y 1 NO son considerados números primos
-  if( numero < 2) return false;
-  if(numero === 2) return true;
-  for(var i = 2; i < numero; i++) {
-    if(numero % i === 0) {
-      return false;
+  var obj = {
+    nombre: nombre,
+    edad: edad,
+    meow: function() {
+      return "Meow!";
     }
-  }
+  };
+  return obj;
+}
+
+
+function agregarPropiedad(objeto, property) {
+  // Agrega una propiedad al objeto (argumento "objeto") con el valor `null`
+  // Devuelve el objeto
+  // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
+  // Tu código:
+  objeto[property] = null;
+  return objeto;
+}
+
+function invocarMetodo(objeto, metodo) {
+  // "metodo" es una cadena que contiene el nombre de un método (funcion) en el objeto
+  // Invoca ese método
+  // Nada necesita ser devuelto ("returned")
+  // Tu código:
+  objeto[metodo]();
+}
+
+function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
+  // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
+  // Multiplica el numeroMisterioso por 5 y devuelve el producto
+  // Tu código:
+  var objMisterioso = {
+    numeroMisterioso: 7
+  };
+  var result = objetoMisterioso.numeroMisterioso * 5;
+  return result;
+
+
+}
+
+function eliminarPropiedad(objeto, unaPropiedad) {
+  // Elimina la propiedad de objeto cuyo nombre está pasado por el parametro unaPropiedad 
+  // tip: tenes que usar bracket notation
+  // Devuelve el objeto
+  // Tu código:
+  delete objeto[unaPropiedad];
+  return objeto;
+
+}
+
+function nuevoUsuario(nombre, email, password) {
+  // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
+  // Devuelve el objeto
+  // Tu código:
+  var obj = {
+    nombre: nombre,
+    email: email,
+    password: password
+  };
+  return obj;
+
+}
+
+function tieneEmail(usuario) {
+  // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
+  // De lo contratio, devuelve "false"
+  // Tu código:
+  if(usuario["email"]) {
   return true;
 }
-esPrimo(3) // "true"
-
-function esVerdadero(valor){
-  //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
-  //si su valor es true y “Soy falso” si su valor es false.
-  //Escribe tu código aquí
-  if(valor === true) {
-    return "Soy verdadero";
-  }
-  if( valor === false) {
-    return "Soy falso"
-  }
+return false;
 }
-esVerdadero(45) // "Soy verdadero"
 
-function tablaDelSeis(){
-  //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
-  //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí 
-  let  arrayTablaDel6 = []
-  for (let i = 0; i < 11; i++) {
-        arrayTablaDel6.push(6 * i)
-  }
-  return arrayTablaDel6
-}
-tablaDelSeis(0,6,12,18,24,30,36,42,48,54,60) // return arrayTabladel6
 
-function tieneTresDigitos(numero){
-  //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
-  //Escribe tu código aquí
-  if(numero >99 && numero < 1000) {
+
+function tienePropiedad(objeto, propiedad) {
+  // Devuelve "true" si el objeto (parámetro "objeto") tiene una propiedad (key) cuyo nombre es igual al valor del argumento "propiedad"
+  // "propiedad" es un string
+  // De lo contrario, devuelve "false"
+  // Tu código:
+  if(objeto[propiedad]) {
     return true;
   }
-    return false;
+  return false;
 }
-tieneTresDigitos(1500) // false
 
-function doWhile(numero) {
-  //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
-  //Retornar el valor final.
-  //Usar el bucle do ... while.
-  var x = numero;
-  var i = 0;
-  do {
-    i = i + 1;
-    x = x + 5;
-  }
-  while( i < 8);
-  return x;
+function verificarPassword(usuario, password) {
+  // Comprueba si la "password" enviada coincide con la propiedad "password" del objeto "usuario"
+  // Devuelve "true" si coinciden
+  // De lo contrario, devuelve "false"
+  // // Tu código:
+  return usuario["password"] === password;
 }
-doWhile(40)
+
+function actualizarPassword(usuario, nuevaPassword) {
+  // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
+  // Devuelve el objeto
+  // Tu código:
+  usuario.password = nuevaPassword;
+  return usuario;
+}
+  
+
+function agregarAmigo(usuario, nuevoAmigo) {
+  // "usuario" tiene una propiedad llamada "amigos" que es un array
+  // Agrega "nuevoAmigo" al final de ese array
+  // Devuelve el objeto "usuario"
+  // // Tu código:
+  var user = {
+   amigos: ['Isaac', 'Sahid']
+  }
+  usuario.amigos.push(nuevoAmigo);
+
+  return usuario;
+}
+
+function pasarUsuarioAPremium(usuarios) {
+  // "usuarios" es un array de objetos "usuario"
+  // Cada objeto "usuario" tiene la propiedad "esPremium"
+  // Define cada propiedad "esPremium" de cada objeto como "true"
+  // Devuelve el array de usuarios
+  // Tu código:
+  for(var i = 0; i < usuarios.length; i++) {
+    usuarios[i].esPremium = true;
+  }
+  return usuarios;
+ 
+}
+function sumarLikesDeUsuario(usuario) {
+  // "usuario" tiene una propiedad llamada "posts" que es un array
+  // "posts" es un array de objetos "post"
+  // Cada objeto "post" tiene una propiedad llamada "likes" que es un entero (int/integer)
+  // Suma todos los likes de todos los objetos "post"
+  // Devuelve la suma
+  // Tu código:
+    var usuario = {
+     posts: [{
+     likes: 286
+     }]
+   };
+   var suma = 0;
+     for(var i = 0; i < usuario.posts.length; i++) {
+     suma = suma + usuario.posts[i].likes;
+   }
+   return suma;
+
+}
+
+
+function agregarMetodoCalculoDescuento(producto) {
+  // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
+  // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto[precio]") y "porcentajeDeDescuento" para obtener el descuento
+  // El método resta el descuento del precio y devuelve el precio con descuento
+  // Devuelve el objeto "producto" al final de la función
+  // Ejemplo:
+  // producto.precio -> 20
+  // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
+  // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
+  // Tu código:
+   var product = {
+     precio: 10,
+     porcentajeDeDescuento: 5,
+     calcularPrecioDescuento: producto.calcularPrecioDescuento = function() {
+    return this.precio - ( this.precio * this.porcentajeDeDescuento );
+    }
+  };
+  return producto;
+}
 
 
 // No modificar nada debajo de esta línea
 // --------------------------------
 
 module.exports = {
-  obtenerMayor,
-  mayoriaDeEdad,
-  conection,
-  saludo,
-  colors,
-  esDiezOCinco,
-  estaEnRango,
-  esEntero,
-  fizzBuzz,
-  operadoresLogicos,
-  esPrimo,
-  esVerdadero,
-  tablaDelSeis,
-  tieneTresDigitos,
-  doWhile
+  crearGato,
+  agregarPropiedad,
+  invocarMetodo,
+  multiplicarNumeroDesconocidoPorCinco,
+  eliminarPropiedad,
+  nuevoUsuario,
+  tieneEmail,
+  tienePropiedad,
+  verificarPassword,
+  actualizarPassword,
+  agregarAmigo,
+  pasarUsuarioAPremium,
+  sumarLikesDeUsuario,
+  agregarMetodoCalculoDescuento
 };
